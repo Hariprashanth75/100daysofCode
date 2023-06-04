@@ -18,6 +18,22 @@ public class Day12StringOps {
 		System.out.println("Length of fullname:-"+s4.length());
 		
 		System.out.println("To uppercase :-"+s4.toUpperCase());
+		
+		if(s1.contains("Hari")==true)
+		{
+			System.out.println("The string1 has the name Hari");
+		}
+		else
+		{
+			System.out.println("The string1 does not have Hari");
+		}
+		
+		char[] charArray = s4.toCharArray();
+		for(int i=0;i<charArray.length;i++)
+		{
+			System.out.println(charArray[i]);	
+		}
+		
 
 	}
 
