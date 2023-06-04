@@ -12,8 +12,12 @@ public class Day12StringOps {
 		s2=sc.nextLine();
 		s3 = s1.concat(s2);
 		s4= s1 + " " +s2;
-		System.out.println("Concatination with operands:"+s4);
-		System.out.println("With concat operator"+s3);
+		System.out.println("Concatination with operands:-"+s4);
+		System.out.println("With concat operator:-"+s3);
+		System.out.println("The length of s1:-"+s1.length()+" The length of s2:-"+s2.length());
+		System.out.println("Length of fullname:-"+s4.length());
+		
+		System.out.println("To uppercase :-"+s4.toUpperCase());
 
 	}
 
