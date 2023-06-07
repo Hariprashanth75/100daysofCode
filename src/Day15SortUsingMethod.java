@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.lang.reflect.Array;
 import java.util.Arrays;
-public class Day14SortUsingMethod {
+public class Day15SortUsingMethod {
 
 	public static int largeArray(int arr1[])
 	{
