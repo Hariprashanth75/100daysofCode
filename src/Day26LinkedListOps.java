@@ -13,9 +13,9 @@ public class Day26LinkedListOps {
 		LinkedList<String> cars = new LinkedList<String>();
 		
 		System.out.println("Now enter the car names");
-		for(int i=0;i<=n;i++)
+		for(int i=0;i<n;i++)
 		{
-			String carName = sc.nextLine();
+			String carName = sc.next();
 			cars.add(carName);
 		}
 		System.out.println("The elements of the linked list"+cars);

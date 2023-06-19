@@ -10,16 +10,18 @@ public class Day8ArrayList {
 		System.out.println("Enter the array size");
 		n = sc.nextInt();
 		System.out.println("Enter the array elements");
-		for(int i=0;i<=n;i++)
+		for(int i=0;i<n;i++)
 		{
 			String element;
-			element = sc.nextLine();
+			element = sc.next();
 			autos.add(element);		
 		}
 		for(int j=0;j<autos.size();j++)
 		{
 		System.out.println(autos.get(j));
 		}
+		
+		System.out.println(autos);
 		sc.close();
 
 	}
