@@ -1,8 +1,12 @@
 package JavaJDBC;
 import java.sql.*;
 import java.util.ArrayList;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 public class Day28JavaJDBC {
 
+	static final int MAX_T = 3; 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
@@ -249,6 +253,192 @@ public class Day28JavaJDBC {
 			System.out.println("allowBetween list \n"+allowBetweenlist);
 			System.out.println("rrateBaseallowBetween list \n"+rateBaseallowBetweenlist);
 		
+			
+			
+			
+			
+			//Setting box capacity for threads by dividing them by 20
+			//Each thread will process n/20 rows
+			
+			int numRows=100000;
+			int boxLimit=0;
+			int maxLimit=0;
+			int start=0;
+			int end=0;
+			int lastPileStart=0;
+			int lastPileEnd=0;
+			
+			ExecutorService pool = Executors.newFixedThreadPool(MAX_T);
+			
+			if(clientIDlist.size() >0)
+			{
+				//numRows = clientIDlist.size()-1;
+				boxLimit = numRows/20;
+				maxLimit = boxLimit * 20;
+				
+				
+				
+			}
+			for(int i=1;i<=20;i++)
+			{
+				if(end==numRows || numRows<20) break;
+				if(i==1)
+				{
+				start=0;
+				end=boxLimit;
+				Runnable r1 = new TaskRunnable(1,start,end);
+				pool.execute(r1);
+				
+				start = end+1;
+				end=end+boxLimit;
+				}
+				if(i==2)
+				{
+					
+					Runnable r2 = new TaskRunnable(2,start,end);
+					pool.execute(r2);
+					start=end+1;
+					end=end+boxLimit;
+				}
+				if(i==3)
+				{
+					
+					Runnable r3 = new TaskRunnable(3,start,end);
+					pool.execute(r3);
+					start=end+1;
+					end=end+boxLimit;
+				}
+				if(i==4)
+				{
+					Runnable r4 = new TaskRunnable(4,start,end);
+					pool.execute(r4);
+					start=end+1;
+					end=end+boxLimit;
+				}
+				if(i==5)
+				{
+					Runnable r5 = new TaskRunnable(5,start,end);
+					pool.execute(r5);
+					start=end+1;
+					end=end+boxLimit;
+				}
+				if(i==6)
+				{
+					Runnable r6 = new TaskRunnable(6,start,end);
+					pool.execute(r6);
+					start=end+1;
+					end=end+boxLimit;
+				}
+				if(i==7)
+				{
+					Runnable r7 = new TaskRunnable(7,start,end);
+					pool.execute(r7);
+					start=end+1;
+					end=end+boxLimit;
+				}
+				if(i==8)
+				{
+					Runnable r8 = new TaskRunnable(8,start,end);
+					pool.execute(r8);
+					start=end+1;
+					end=end+boxLimit;
+				}
+				if(i==9)
+				{
+					Runnable r9 = new TaskRunnable(9,start,end);
+					pool.execute(r9);
+					start=end+1;
+					end=end+boxLimit;
+				}
+				if(i==10)
+				{
+					Runnable r10 = new TaskRunnable(10,start,end);
+					pool.execute(r10);
+					start=end+1;
+					end=end+boxLimit;
+				}
+				if(i==11)
+				{
+					Runnable r11 = new TaskRunnable(11,start,end);
+					pool.execute(r11);
+					start=end+1;
+					end=end+boxLimit;
+				}
+				if(i==12)
+				{
+					Runnable r12 = new TaskRunnable(12,start,end);
+					pool.execute(r12);
+					start=end+1;
+					end=end+boxLimit;
+				}
+				if(i==13)
+				{
+					Runnable r13 = new TaskRunnable(13,start,end);
+					pool.execute(r13);
+					start=end+1;
+					end=end+boxLimit;
+				}
+				if(i==14)
+				{
+					Runnable r14 = new TaskRunnable(14,start,end);
+					pool.execute(r14);
+					start=end+1;
+					end=end+boxLimit;
+				}
+				if(i==15)
+				{
+					Runnable r15 = new TaskRunnable(15,start,end);
+					pool.execute(r15);
+					start=end+1;
+					end=end+boxLimit;
+				}
+				if(i==16)
+				{
+					Runnable r16 = new TaskRunnable(16,start,end);
+					pool.execute(r16);
+					start=end+1;
+					end=end+boxLimit;
+				}
+				if(i==17)
+				{
+					Runnable r17 = new TaskRunnable(17,start,end);
+					pool.execute(r17);
+					start=end+1;
+					end=end+boxLimit;
+				}
+				if(i==18)
+				{
+					Runnable r18 = new TaskRunnable(18,start,end);
+					pool.execute(r18);
+					start=end+1;
+					end=end+boxLimit;
+				}
+				if(i==19)
+				{
+					Runnable r19 = new TaskRunnable(19,start,end);
+					pool.execute(r19);
+					start=end+1;
+					end=end+boxLimit;
+				}
+				if(i==20)
+				{
+					Runnable r20 = new TaskRunnable(20,start,end);
+					pool.execute(r20);
+					start=end+1;
+					end=end+boxLimit;
+					//initiate last thread
+					lastPileStart=start;
+					lastPileEnd=numRows;
+					Runnable lastThread = new TaskRunnable(21,lastPileStart,lastPileEnd);
+					pool.execute(lastThread);
+					start=lastPileStart;
+					end=numRows;
+				}
+			}
+			 pool.shutdown();
+			
+			
+			
 			
 			connection.close();
 			
