@@ -18,18 +18,20 @@ public class Day29SplitTheListIntoChunks {
        
         System.out.println(Chunks.get(1).get(1));
         
-        
+        int first,lastnum,last;
         for(int i=0;i<Chunks.size();i++)
         {
         	System.out.println("Chunk:"+i);
         	for(int j=0;j<Chunks.get(i).size();j++)
         	{
-        		int first=Chunks.get(i).get(0);
-        		int lastnum =Chunks.get(i).size()-1;
-        		int last=Chunks.get(i).get(lastnum);
+        		first=Chunks.get(i).get(0);
+        		lastnum =Chunks.get(i).size()-1;
+        		last=Chunks.get(i).get(lastnum);
         		System.out.println("First number of "+first);
         		System.out.println("The last number of"+last);
+        		
         	}
+        	
         }
         
 	}
