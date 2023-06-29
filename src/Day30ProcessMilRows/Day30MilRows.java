@@ -8,9 +8,10 @@ public class Day30MilRows {
 		String url="jdbc:sqlserver://CAW2104467\\MSSQLSERVER01;databaseName=CDI;encrypt=false";
 		String username="IICS_SQL";
 		String password="IICS_SQL";
+		Connection connection;
 		try
 		{
-			Connection connection = DriverManager.getConnection(url,username,password);
+			connection = DriverManager.getConnection(url,username,password);
 			System.out.println("Connected to MSSQL server");
 			
 			//Sum of all rows query
