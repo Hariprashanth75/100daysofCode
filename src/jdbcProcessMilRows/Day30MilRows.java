@@ -1,4 +1,4 @@
-package Day30ProcessMilRows;
+package jdbcProcessMilRows;
 import java.sql.*;
 
 public class Day30MilRows {

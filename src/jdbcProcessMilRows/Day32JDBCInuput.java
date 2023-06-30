@@ -1,4 +1,4 @@
-package Day30ProcessMilRows;
+package jdbcProcessMilRows;
 import java.sql.*;
 import java.util.*;
 class ConnectToJDBC
