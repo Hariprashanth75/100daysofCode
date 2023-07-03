@@ -67,7 +67,7 @@ class querySecond implements connectToJDBCFresh
 		
 	}
 }
-public class Day33JDBCInheritance {
+public class Day33JDBCInterface {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
