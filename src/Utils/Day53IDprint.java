@@ -7,6 +7,9 @@ String address;
 static int fee=100;
 static int ID=0;
 
+/**
+ * This is a Java doc comment
+ */
 public void Day53IDprint()
 {
 	ID = ID+1;
