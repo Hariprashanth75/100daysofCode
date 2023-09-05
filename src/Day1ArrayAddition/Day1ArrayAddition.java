@@ -1,3 +1,4 @@
+package Day1ArrayAddition;
 import java.io.*;
 import java.util.Scanner;
 public class Day1ArrayAddition {

@@ -1,4 +1,4 @@
-package LinkedList;
+package Day51LinkedList;
 
 public class LinkedList {
 	

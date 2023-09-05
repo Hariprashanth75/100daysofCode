@@ -1,4 +1,4 @@
-package jdbcProcessMilRows;
+package Day30_Day31_Day32_Day33_jdbcProcessMilRows;
 import java.sql.*;
 
 interface connectToJDBCFresh

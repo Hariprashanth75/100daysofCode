@@ -1,4 +1,4 @@
-package JavaJDBC;
+package Day28JavaJDBC;
 import java.util.concurrent.*;
 public class TaskRunnable implements Runnable{
 	int execute;

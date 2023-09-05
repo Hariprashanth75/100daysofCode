@@ -1,4 +1,4 @@
-package JavaJDBC;
+package Day28JavaJDBC;
 import java.sql.*;
 import java.util.ArrayList;
 
